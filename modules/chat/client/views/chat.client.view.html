@@ -1,0 +1,36 @@
+<!-- The chat view -->
+<div class="page-header">
+  <div class="bs-docs-header">
+    <h1><span class="glyphicon glyphicon-envelope"></span> FixPC Chat</h1>
+    <p>Este chat es para los clientes de fixPC</p>
+  </div>
+</div>
+<section class="container">
+  <!-- The message form -->
+  <form class="col-xs-12  col-md-12" ng-submit="vm.sendMessage();">
+    <fieldset class="row">
+      <div class="input-group">
+        <input type="text" id="messageText" name="messageText" class="form-control" ng-model="vm.messageText" placeholder="Escribe tu mensaje" autofocus>
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-primary" ng-disabled="!vm.messageText.length"> <span class="glyphicon glyphicon-send"></span> Enviar mensaje</button>
+        </span>
+      </div>
+    </fieldset>
+  </form>
+  <ul class="list-unstyled">
+    <!-- List all messages -->
+    <li class="col-xs-12  col-md-12 chat-message" ng-repeat="message in vm.messages">
+      <div class="panel panel-default" style="margin-bottom: 0;">
+        <div class="panel-body">
+          <small  class="pull-right text-muted"><span class="glyphicon glyphicon-time"></span> <small ng-bind="message.created | date:'mediumTime'"></small></small>
+           <img ng-src="/{{message.profileImageURL}}" alt="{{message.username}}" class="pull-left chat-profile-image" style="width 50px; height="50px"; " />
+           <div class="pull-left chat-message-details">
+             <strong ng-bind="message.username"></strong>
+             <br>
+             <span ng-bind="message.text"></span>
+           </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
