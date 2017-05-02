@@ -7,6 +7,7 @@ FixPCMonitor use MEAN.JS.
 Make sure you have installed all of the following prerequisites on your development machine:
 * Ana Carolina Mondragon Rangel
 * Fernando Manuel Avila Cataño
+* Winston Rames Tenatic Bautista Bañuelos
 
 ## Community
 * Use the [Official Website](http://meanjs.org) to learn about changes and the roadmap.
