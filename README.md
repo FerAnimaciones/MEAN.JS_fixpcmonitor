@@ -10,11 +10,9 @@ Make sure you have installed all of the following prerequisites on your developm
 * Winston Rames Tenatic Bautista Bañuelos
 
 ## Community
-* Use the [Official Website](http://meanjs.org) to learn about changes and the roadmap.
-* Join #meanjs on freenode.
-* Discuss it in the new [Google Group](https://groups.google.com/d/forum/meanjs)
-* Ping us on [Twitter](http://twitter.com/meanjsorg) and [Facebook](http://facebook.com/meanjs)
+* Pagina oficial de feranimaciones [Official Website](feranimaciones.esy.es/).
 
 
 ## License
 [The MIT License](LICENSE.md)
+[![FixPCMonitor](http://feranimaciones.esy.es/fixpcmonitor/pn.png)](http://www.feranimaciones.esy.es/)
