@@ -6,7 +6,7 @@ module.exports = function (io, socket) {
   io.emit('chatMessage', {
     type: 'status',
     text: 'Te conectaste',
-    created:Date.now(),
+    created: Date.now(),
     profileImageURL: socket.request.user.profileImageURL,
     username: socket.request.user.username
   });

@@ -4,7 +4,10 @@
   angular
     .module('core')
     .run(menuConfig);
-
+  /*
+  angular
+  .module('app', ['core','articles'])
+*/
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {

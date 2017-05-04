@@ -12,6 +12,5 @@
 
     vm.article = article;
     vm.authentication = Authentication;
-
   }
 }());
