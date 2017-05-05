@@ -40,7 +40,7 @@
           userResolve: getUser
         },
         data: {
-          pageTitle: 'Edit User {{ userResolve.displayName }}'
+          pageTitle: 'Editar User {{ userResolve.displayName }}'
         }
       });
 

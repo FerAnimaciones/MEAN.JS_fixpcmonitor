@@ -18,7 +18,7 @@ var ArticleSchema = new Schema({
     type: String,
     default: '',
     trim: true,
-    required: 'Title cannot be blank'
+    required: 'El titulo no puede estar en blanco'
   },
   content: {
     type: String,
@@ -28,6 +28,10 @@ var ArticleSchema = new Schema({
   user: {
     type: Schema.ObjectId,
     ref: 'User'
+  },
+  imageUrl: {
+    type: String,
+    default: 'modules/articles/client/img/default.png'
   }
 });
 

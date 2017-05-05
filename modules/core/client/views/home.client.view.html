@@ -4,31 +4,38 @@
       <div class="page-header">
         <h1>Noticias Recientes</h1>
       </div>
-      <div class="list-group" >
+
+      <div ng-app="myApp" ng-controller="nombres">
+      {{ firstName + " " + lastName }}
+      </div>
+
+      <div class="list-group">
         <a ng-repeat="article in vm.articles" ui-sref="articles.view({ articleId: article._id })" class="list-group-item">
           <small class="list-group-item-text">
-            Posted on
+            Publicado el
             <span ng-bind="article.created | date:'mediumDate'"></span>
-            by
+            por
             <span ng-if="article.user" ng-bind="article.user.displayName"></span>
             <span ng-if="!article.user">Deleted User</span>
           </small>
-          <h4 class="list-group-item-heading" ng-bind="article.title"></h4>
+          <h2 class="list-group-item-heading" ng-bind="article.title"></h2>
           <p class="list-group-item-text" ng-bind="article.content"></p>
         </a>
       </div>
-    </div>
+
+
   </div>
-  <div class="well">
-    <h2>Infraestructura web</h2>
-    <p>
+</div>
+<div class="well">
+  <h2>Infraestructura web</h2>
+  <p>
     Integrantes
-      <ul>
-        <li>Ana Carolina Mondragon Rangel</li>
-        <li>Fernando Manuel Avila Cataño</li>
-        <li>Winston Ramses Tenatic Bautista Bañuelos</li>
-      </ul>
-    </p>
-  </div>
+    <ul>
+      <li>Ana Carolina Mondragon Rangel</li>
+      <li>Fernando Manuel Avila Cataño</li>
+      <li>Winston Ramses Tenatic Bautista Bañuelos</li>
+    </ul>
+  </p>
+</div>
 
 </section>
