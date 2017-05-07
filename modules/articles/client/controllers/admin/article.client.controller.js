@@ -54,7 +54,6 @@
 
   function ChangeProfilePictureController($timeout, Authentication, Upload, Notification) {
     var vm = this;
-    
     vm.user = Authentication.user;
     vm.progress = 0;
 

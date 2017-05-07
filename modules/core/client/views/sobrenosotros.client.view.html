@@ -1,0 +1,39 @@
+<section>
+  <div class="row">
+    <div class="col-md-12  col-sm-12  col-xs-12">
+      <div class="page-header">
+        <h2><i class="fa fa-users fa-1x" aria-hidden="true"></i>EQUIPO DESARROLLADOR</h2>
+      </div>
+      <div ng-app="myApp" ng-controller="nombres">
+        {{ integrante1 + " " + integrante12 }}
+      </div>
+      <div   ng-app="myApp" ng-controller="nombres">
+        <h2>Desarrollo en Infraestructura web <i class="fa fa-server" aria-hidden="true"></i> </h2>
+        <p>
+          Equipo Conformado por:
+          <div class="row">
+            <div class="col-md-12  col-sm-12  col-xs-12">
+
+              <div class="col-md-4" ng-repeat="x in nombresarreglo">
+                <div class="card">
+                  <div class="card-image">
+                    <center>
+                      <img class="img-responsive" ng-src="{{x.foto}}" >
+                    </center>
+                    <span class="card-title"> </span>
+                  </div>
+                  <div class="card-action">
+                    <center>
+                    <p> <b> {{x.nombre}} </b></p>
+                  </center>
+                  </div>
+                  <!--<div class="card-action" class="card-content">  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

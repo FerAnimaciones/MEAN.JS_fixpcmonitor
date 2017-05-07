@@ -33,6 +33,12 @@
         controller: 'HomeController',
         controllerAs: 'vm'
       })
+      .state('sobrenosotros', {
+        url: '/sobrenosotros',
+        templateUrl: '/modules/core/client/views/sobrenosotros.client.view.html',
+        controller: 'sobreNosotros',
+        controllerAs: 'vm'
+      })
       .state('not-found', {
         url: '/not-found',
         templateUrl: '/modules/core/client/views/404.client.view.html',

@@ -15,6 +15,13 @@
       roles: ['user']
     });
 
+    menuService.addMenuItem('topbar', {
+      title: 'Sobre Nosotros',
+      state: 'sobrenosotros',
+      roles: ['*'],
+      position: 3
+    });
+
     menuService.addMenuItem('account', {
       title: '',
       state: 'settings',
@@ -36,6 +43,9 @@
       title: 'Cambiar contraseña',
       state: 'settings.password'
     });
-
   }
+
+
+
+
 }());
