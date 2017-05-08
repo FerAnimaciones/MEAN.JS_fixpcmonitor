@@ -1,21 +1,18 @@
 <section>
   <div class="page-header">
-    <h1>Settings</h1>
+    <h1><i class="fa fa-cog" aria-hidden="true"></i> CONFIGURACION PERFIL</h1>
   </div>
   <div class="row">
     <nav class="col-sm-3 col-md-3">
       <ul class="nav nav-pills nav-stacked">
         <li ui-sref-active="active">
-          <a ui-sref="settings.profile">Edit Profile</a>
+          <a ui-sref="settings.profile"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> EDITAR PERFIL</a>
         </li>
         <li ui-sref-active="active">
-          <a ui-sref="settings.picture">Change Profile Picture</a>
+          <a ui-sref="settings.picture"><i class="fa fa-picture-o" aria-hidden="true"></i> CAMBIAR FOTO PERFIL</a>
         </li>
         <li ui-sref-active="active" ng-show="vm.user.provider === 'local'">
-          <a ui-sref="settings.password">Change Password</a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="settings.accounts">Manage Social Accounts</a>
+          <a ui-sref="settings.password"><i class="fa fa-key" aria-hidden="true"></i> CAMBIAR CONTRASEÑA</a>
         </li>
       </ul>
     </nav>

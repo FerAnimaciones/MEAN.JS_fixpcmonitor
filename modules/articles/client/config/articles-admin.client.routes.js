@@ -11,7 +11,7 @@
     $stateProvider
       .state('admin.articles', {
         abstract: true,
-        url: '/articles',
+        url: '/noticias',
         template: '<ui-view/>'
       })
       .state('admin.articles.list', {
@@ -24,7 +24,7 @@
         }
       })
       .state('admin.articles.create', {
-        url: '/create',
+        url: '/crear',
         templateUrl: '/modules/articles/client/views/admin/form-article.client.view.html',
         controller: 'ArticlesAdminController',
         controllerAs: 'vm',
@@ -36,7 +36,7 @@
         }
       })
       .state('admin.articles.edit', {
-        url: '/:articleId/edit',
+        url: '/:articleId/editar',
         templateUrl: '/modules/articles/client/views/admin/form-article.client.view.html',
         controller: 'ArticlesAdminController',
         controllerAs: 'vm',

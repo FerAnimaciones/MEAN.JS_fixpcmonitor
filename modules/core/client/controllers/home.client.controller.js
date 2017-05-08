@@ -23,7 +23,7 @@
   ArticlesListController.$inject = ['ArticlesService'];
   function ArticlesListController(ArticlesService) {
     var vm = this;
-      console.log("HOLIIIIIIIIIIIIIS");
+      console.log("este no funciona xDDD");
     vm.articles = ArticlesService.query();
   }
   console.log("holaaa");

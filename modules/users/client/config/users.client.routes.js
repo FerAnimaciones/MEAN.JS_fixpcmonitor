@@ -13,7 +13,7 @@
     $stateProvider
       .state('settings', {
         abstract: true,
-        url: '/settings',
+        url: '/configuracion',
         templateUrl: '/modules/users/client/views/settings/settings.client.view.html',
         controller: 'SettingsController',
         controllerAs: 'vm',
@@ -22,39 +22,39 @@
         }
       })
       .state('settings.profile', {
-        url: '/profile',
+        url: '/perfil',
         templateUrl: '/modules/users/client/views/settings/edit-profile.client.view.html',
         controller: 'EditProfileController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Settings'
+          pageTitle: 'Configuraciones'
         }
       })
       .state('settings.password', {
-        url: '/password',
+        url: '/contra',
         templateUrl: '/modules/users/client/views/settings/change-password.client.view.html',
         controller: 'ChangePasswordController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Settings password'
+          pageTitle: 'Configuracion contraseña'
         }
       })
       .state('settings.accounts', {
-        url: '/accounts',
+        url: '/cuentas',
         templateUrl: '/modules/users/client/views/settings/manage-social-accounts.client.view.html',
         controller: 'SocialAccountsController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Settings accounts'
+          pageTitle: 'Configuracion cuentas'
         }
       })
       .state('settings.picture', {
-        url: '/picture',
+        url: '/fotoperfil',
         templateUrl: '/modules/users/client/views/settings/change-profile-picture.client.view.html',
         controller: 'ChangeProfilePictureController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Settings picture'
+          pageTitle: 'Configuracion Foto Perfil'
         }
       })
       .state('authentication', {

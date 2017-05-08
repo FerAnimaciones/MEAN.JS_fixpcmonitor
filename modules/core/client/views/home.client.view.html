@@ -1,31 +1,25 @@
 <section>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+    <div class="col-md-12  col-sm-12  col-xs-12">
       <div class="page-header">
-        <h1>Noticias Recientes</h1>
+        <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i> Noticias Recientes</h1>
       </div>
-
-      <div ng-app="myApp" ng-controller="nombres">
-      {{ firstName + " " + lastName }}
-      </div>
-
-      <div class="list-group">
+      <div class="list-group" ng-app="ArticlesListController">
         <a ng-repeat="article in vm.articles" ui-sref="articles.view({ articleId: article._id })" class="list-group-item">
           <small class="list-group-item-text">
             Publicado el
-            <span ng-bind="article.created | date:'mediumDate'"></span>
+            <span ng-bind="article.creado | date:'mediumDate'"></span>
             por
             <span ng-if="article.user" ng-bind="article.user.displayName"></span>
             <span ng-if="!article.user">Deleted User</span>
           </small>
-          <h2 class="list-group-item-heading" ng-bind="article.title"></h2>
-          <p class="list-group-item-text" ng-bind="article.content"></p>
+          <h2 class="list-group-item-heading" ng-bind="article.titulo"></h2>
+          <p class="list-group-item-text" ng-bind="article.contenido | limitTo: 150"></p>
         </a>
       </div>
-
-
   </div>
 </div>
+<br>
 <div class="well">
   <h2>Infraestructura web</h2>
   <p>
@@ -37,5 +31,4 @@
     </ul>
   </p>
 </div>
-
 </section>
