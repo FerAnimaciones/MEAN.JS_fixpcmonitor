@@ -2,7 +2,7 @@
   <div class="page-header">
     <div class="row">
       <div class="col-md-4">
-        <h1>Usuarios</h1>
+        <h1><i class="fa fa-users" aria-hidden="true"></i> Usuarios</h1>
       </div>
       <div class="col-md-8" style="margin-top: 2em">
         <input class="form-control col-md-4" type="text" ng-model="vm.search" placeholder="Buscar" ng-change="vm.figureOutItemsToDisplay()" />
@@ -11,11 +11,17 @@
   </div>
   <div class="list-group">
     <a ng-repeat="user in vm.pagedItems" ui-sref="admin.user({userId: user._id})" class="list-group-item">
-      <h4 class="list-group-item-heading" ng-bind="user.username"></h4>
-      <p class="list-group-item-text pull-right small" ng-bind="user.roles"></p>
-      <p class="list-group-item-text" ng-bind="user.email"></p>
+      <div class="row">
+        <div class="col-md-11">
+             <h4 class="list-group-item-heading" ng-bind="user.username"></h4>
+             <p class="list-group-item-text" ng-bind="user.email"></p>
+        </div>
+        <div class="col-md-1">
+          <img ng-src="/{{user.profileImageURL}}" alt="{{user.displayName}}" class="header-profile-image" style=" width: 50px;height:50px;"  />
+            <p class="list-group-item-text pull-right small" ng-bind="user.roles"></p>
+        </div>
+      </div>
     </a>
   </div>
-
-  <uib-pagination boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
+  <uib-pagination  first-text="PRIMERO"  last-text="ULTIMO"  next-text="SIGUIENTE" previous-text="PREVIO" boundary-links="true" max-size="8" items-per-page="vm.itemsPerPage" total-items="vm.filterLength" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></uib-pagination>
 </section>
