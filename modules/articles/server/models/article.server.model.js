@@ -10,17 +10,17 @@ var mongoose = require('mongoose'),
  * Article Schema
  */
 var ArticleSchema = new Schema({
-  created: {
+  creado: {
     type: Date,
     default: Date.now
   },
-  title: {
+  titulo: {
     type: String,
     default: '',
     trim: true,
     required: 'El titulo no puede estar en blanco'
   },
-  content: {
+  contenido: {
     type: String,
     default: '',
     trim: true

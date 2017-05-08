@@ -1,10 +1,10 @@
 <section>
   <div class="page-header">
-    <h1>{{vm.article._id ? 'Edit Article' : 'Nueva Noticia'}}</h1>
+    <h1>{{vm.article._id ? 'Editar Noticia' : 'Nueva Noticia'}}</h1>
   </div>
   <div class="pull-right">
-    <a ng-show="vm.article._id" class="btn btn-primary" ng-click="vm.remove()">
-      <i class="glyphicon glyphicon-trash"></i>
+    <a ng-show="vm.article._id" class="btn btn-danger" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i> BORRAR NOTICA
     </a>
   </div>
   <div class="col-md-12">
@@ -12,14 +12,14 @@
       <fieldset>
         <div class="form-group" show-errors>
           <label class="control-label" for="title">Titulo</label>
-          <input name="title" type="text" ng-model="vm.article.title" id="title" class="form-control" placeholder="Titulo de la noticia" required autofocus>
+          <input name="titulo" type="text" ng-model="vm.article.titulo" id="titulo" class="form-control" placeholder="Titulo de la noticia" required autofocus>
           <div ng-messages="vm.form.articleForm.title.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Se requiere un titulo de noticia</p>
           </div>
         </div>
         <div class="form-group">
           <label class="control-label" for="content">Contenido</label>
-          <textarea name="content" data-ng-model="vm.article.content" id="content" class="form-control" cols="30" rows="10" placeholder="Contenido noticia"></textarea>
+          <textarea name="contenido" data-ng-model="vm.article.contenido" id="contenido" class="form-control" cols="30" rows="10" placeholder="Contenido noticia"></textarea>
         </div>
         <div class="form-group">
           <div class="form-group text-center">
@@ -34,12 +34,12 @@
           </div>
           <div ng-show="vm.fileSelected" class="progress text-center">
             <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{vm.progress}}%" ng-bind="vm.progress + '%'">
-              <span class="sr-only">{{vm.progress}}% Complete</span>
+              <span class="sr-only">{{vm.progress}}% Completado</span>
             </div>
           </div>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-success btn-lg btn-block">{{vm.article._id ? 'Actualizar noticia' : 'Publicar noticia'}}</button>
+          <button type="submit" class="btn btn-success btn-lg btn-block" ><i class="fa fa-plus-circle" aria-hidden="true"></i> {{vm.article._id ? 'Actualizar noticia' : 'Publicar noticia'}}</button>
         </div>
       </fieldset>
     </form>

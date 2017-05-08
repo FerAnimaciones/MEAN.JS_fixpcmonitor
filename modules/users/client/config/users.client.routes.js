@@ -70,7 +70,7 @@
         controller: 'AuthenticationController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Signup'
+          pageTitle: 'REGISTRO'
         }
       })
       .state('authentication.signin', {
@@ -79,7 +79,7 @@
         controller: 'AuthenticationController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Signin'
+          pageTitle: 'INICIAR SESION'
         }
       })
       .state('password', {

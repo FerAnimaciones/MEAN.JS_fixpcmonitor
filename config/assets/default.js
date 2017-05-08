@@ -25,6 +25,7 @@ module.exports = {
         'public/lib/angular-ui-notification/dist/angular-ui-notification.js',
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
+        'modules/articles/client/js/fecha_esp.js'
         // endbower
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']

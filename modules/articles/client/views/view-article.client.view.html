@@ -1,16 +1,18 @@
 <section>
   <div class="page-header">
-    <h1 ng-bind="vm.article.title"></h1>
+    <div>
+      <h1 ng-bind="vm.article.titulo"></h1>
+    </div>
   </div>
   <small>
     <em class="text-muted">
-      Posted on
-      <span ng-bind="vm.article.created | date:'mediumDate'"></span>
-      by
+      Publicado el
+      <span ng-bind="vm.article.creado |  date:'dd MMMM yyyy  hh:mm'"></span>
+     por
       <span ng-if="vm.article.user" ng-bind="vm.article.user.displayName"></span>
       <span ng-if="!vm.article.user">Deleted User</span>
     </em>
   </small>
   <p data-ng-bind="article.comment"></p>
-  <p class="lead" ng-bind="vm.article.content"></p>
+  <p class="lead" ng-bind="vm.article.contenido"></p>
 </section>
