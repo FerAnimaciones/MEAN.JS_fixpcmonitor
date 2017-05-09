@@ -4,16 +4,16 @@
       <div class="row">
         <div class="col-md-12  col-sm-12  col-xs-12">
           <div ng-controller="CarouselDemoCtrl" id="slides_control">
-              <div>
-                  <uib-carousel interval="myInterval" active="activeSlide">
-                      <uib-slide ng-repeat="slide in slides" index="$index">
-                          <img ng-src="{{slide.image}}" style="margin:auto;">
-                          <div class="carousel-caption">
-                           <!-- <h4>{{$index+1}}</h4>-->
-                          </div>
-                      </uib-slide>
-                  </uib-carousel>
-              </div>
+            <div>
+              <uib-carousel interval="myInterval" active="activeSlide">
+                <uib-slide ng-repeat="slide in slides" index="$index">
+                  <img ng-src="{{slide.image}}" style="margin:auto;">
+                  <div class="carousel-caption">
+                    <!-- <h4>{{$index+1}}</h4>-->
+                  </div>
+                </uib-slide>
+              </uib-carousel>
+            </div>
           </div>
         </div>
       </div>
@@ -33,18 +33,46 @@
           <p class="list-group-item-text" ng-bind="article.contenido | limitTo: 150"></p>
         </a>
       </div>
+    </div>
   </div>
-</div>
-<br>
-<div class="well">
-  <h2>Infraestructura web</h2>
-  <p>
-    Integrantes
-    <ul>
-      <li>Ana Carolina Mondragon Rangel</li>
-      <li>Fernando Manuel Avila Cataño</li>
-      <li>Winston Ramses Tenatic Bautista Bañuelos</li>
-    </ul>
-  </p>
-</div>
+  <br>
+  <div class="row">
+    <div class="col-md-9  col-sm-9  col-xs-12">
+      <div class="well">
+        <h2>Infraestructura web</h2>
+        <p>
+          Integrantes
+          <ul>
+            <li>Ana Carolina Mondragon Rangel</li>
+            <li>Fernando Manuel Avila Cataño</li>
+            <li>Winston Ramses Tenatic Bautista Bañuelos</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-3  col-sm-3 col-xs-12">
+      <div class="list-group-item">
+        <div class="row">
+          <div class="col-md-6  col-sm-6  col-xs-12">
+            <img ng-src="/modules/core/client/img/pn.png" width="127">
+          </div>
+          <div class="col-md-6  col-sm-6  col-xs-12"  ng-controller="HeaderController as vm">
+            <center>
+              <div ng-hide="vm.authentication.user">
+                <h4>¿Ya estas registrado?</h4>
+                <a class="btn btn-success" ui-sref="authentication.signup"><i class="fa fa-user-plus" aria-hidden="true"></i>REGISTRO</a>
+              </div>
+              <div ng-show="vm.authentication.user">
+                <h4>Bienvenido/da</h4>
+                  <span ng-bind="vm.authentication.user.displayName"></span>
+                  <br>
+                  <img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" class="header-profile-image"  style=" width: 100px;height:100px;"  />
+              </div>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
