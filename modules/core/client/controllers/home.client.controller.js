@@ -23,8 +23,25 @@
   ArticlesListController.$inject = ['ArticlesService'];
   function ArticlesListController(ArticlesService) {
     var vm = this;
-      console.log("este no funciona xDDD");
+    console.log("este no funciona xDDD");
     vm.articles = ArticlesService.query();
+  }
+  angular
+  .module('core')
+  .controller('CarouselDemoCtrl', CarouselDemoCtrl);
+  function CarouselDemoCtrl($scope) {
+    var vm = this;
+    $scope.myInterval = 3000;
+    $scope.noWrapSlides = false;
+    $scope.activeSlide = 0;
+    $scope.slides = [
+      {
+        image: '/modules/core/client/img/banner/foto1.png'
+      },
+      {
+        image: '/modules/core/client/img/banner/foto2.png'
+      }
+    ];
   }
   console.log("holaaa");
 }());

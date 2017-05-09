@@ -1,6 +1,22 @@
 <section>
   <div class="row">
     <div class="col-md-12  col-sm-12  col-xs-12">
+      <div class="row">
+        <div class="col-md-12  col-sm-12  col-xs-12">
+          <div ng-controller="CarouselDemoCtrl" id="slides_control">
+              <div>
+                  <uib-carousel interval="myInterval" active="activeSlide">
+                      <uib-slide ng-repeat="slide in slides" index="$index">
+                          <img ng-src="{{slide.image}}" style="margin:auto;">
+                          <div class="carousel-caption">
+                           <!-- <h4>{{$index+1}}</h4>-->
+                          </div>
+                      </uib-slide>
+                  </uib-carousel>
+              </div>
+          </div>
+        </div>
+      </div>
       <div class="page-header">
         <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i> Noticias Recientes</h1>
       </div>
