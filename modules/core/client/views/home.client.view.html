@@ -3,60 +3,80 @@
     <div class="col-md-12  col-sm-12  col-xs-12">
       <div class="row">
         <div class="col-md-12  col-sm-12  col-xs-12">
+          <section class="open-source">
+            <center>
+              <div>
+                <center>
+                  <img   class="img-responsive" ng-src="/modules/core/client/img/logobig2.png" width="500">
+                </center>
+                <div class="radar">
+                </div><div class="radar"
+                ></div><div class="radar">
+                </div>
+              </div>
+            </center>
+          </section>
+          <!--
           <div ng-controller="CarouselDemoCtrl" id="slides_control">
-            <div>
-              <uib-carousel interval="myInterval" active="activeSlide">
-                <uib-slide ng-repeat="slide in slides" index="$index">
-                  <img ng-src="{{slide.image}}" style="margin:auto;">
-                  <div class="carousel-caption">
-                    <!-- <h4>{{$index+1}}</h4>-->
-                  </div>
-                </uib-slide>
-              </uib-carousel>
-            </div>
-          </div>
+          <div>
+          <uib-carousel interval="myInterval" active="activeSlide">
+          <uib-slide ng-repeat="imagen in slides" index="$index">
+          <img ng-src="{{imagen.image}}" style="margin:auto;">
+          <div class="carousel-caption">
+          <!-- <h4>{{$index+1}}</h4>--> <!--
         </div>
-      </div>
-      <div class="page-header">
-        <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i> Noticias Recientes</h1>
-      </div>
-      <div class="list-group" ng-app="ArticlesListController">
-        <a ng-repeat="article in vm.articles" ui-sref="articles.view({ articleId: article._id })" class="list-group-item">
-          <small class="list-group-item-text">
-            Publicado el
-            <span ng-bind="article.creado | date:'mediumDate'"></span>
-            por
-            <span ng-if="article.user" ng-bind="article.user.displayName"></span>
-            <span ng-if="!article.user">Deleted User</span>
-          </small>
-          <h2 class="list-group-item-heading" ng-bind="article.titulo"></h2>
-          <p class="list-group-item-text" ng-bind="article.contenido | limitTo: 150"></p>
-        </a>
-      </div>
+      </uib-slide>
+    </uib-carousel>
+  </div>
+</div>
+-->
+</div>
+</div>
+<div class="page-header">
+  <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i> Noticias Recientes</h1>
+</div>
+<div class="list-group" ng-app="ArticlesListController">
+  <a ng-repeat="noticias in vm.articles" ui-sref="articles.view({ articleId: noticias._id })" class="list-group-item">
+    <small class="list-group-item-text">
+      Publicado el
+      <span ng-bind="noticias.creado | date:'mediumDate'"></span>
+      por
+      <span ng-if="noticias.user" ng-bind="noticias.user.displayName"></span>
+      <span ng-if="!noticias.user">Deleted User</span>
+    </small>
+    <h2 class="list-group-item-heading" ng-bind="noticias.titulo"></h2>
+    <p class="list-group-item-text" ng-bind="noticias.contenido | limitTo: 150"></p>
+  </a>
+</div>
+</div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-9  col-sm-9  col-xs-12">
+    <div class="well">
+      <h2>Infraestructura web</h2>
+      <p>
+        Integrantes
+        <ul>
+          <li>Ana Carolina Mondragon Rangel</li>
+          <li>Fernando Manuel Avila Cataño</li>
+          <li>Winston Ramses Tenatic Bautista Bañuelos</li>
+        </ul>
+      </p>
     </div>
   </div>
-  <br>
-  <div class="row">
-    <div class="col-md-9  col-sm-9  col-xs-12">
-      <div class="well">
-        <h2>Infraestructura web</h2>
-        <p>
-          Integrantes
-          <ul>
-            <li>Ana Carolina Mondragon Rangel</li>
-            <li>Fernando Manuel Avila Cataño</li>
-            <li>Winston Ramses Tenatic Bautista Bañuelos</li>
-          </ul>
-        </p>
-      </div>
-    </div>
-    <div class="col-md-3  col-sm-3 col-xs-12">
-      <div class="list-group-item">
+  <div class="col-md-3  col-sm-3 col-xs-12">
+
+    <div class="panel panel-default">
+      <div class="panel-body">
         <div class="row">
           <div class="col-md-6  col-sm-6  col-xs-12">
-            <img ng-src="/modules/core/client/img/pn.png" width="127">
+            <center>
+                <img  class="img-responsive" ng-src="/modules/core/client/img/pn.png" width="127">
+            </center>
           </div>
           <div class="col-md-6  col-sm-6  col-xs-12"  ng-controller="HeaderController as vm">
+
             <center>
               <div ng-hide="vm.authentication.user">
                 <h4>¿Ya estas registrado?</h4>
@@ -64,15 +84,62 @@
               </div>
               <div ng-show="vm.authentication.user">
                 <h4>Bienvenido/da</h4>
-                  <span ng-bind="vm.authentication.user.displayName"></span>
-                  <br>
-                  <img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" class="header-profile-image"  style=" width: 100px;height:100px;"  />
+                <span ng-bind="vm.authentication.user.displayName"></span>
+                <br>
+                <img ng-src="/{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" class="header-profile-image img-responsive"  style=" width: 100px;height:100px;"  />
               </div>
             </center>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+  </div>
+</div>
+<footer>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2><i class="fa fa-link" aria-hidden="true"></i> Enlaces</h2>
+          <article >
+            <ul  ng-controller="HeaderController as vm">
+              <div ng-hide="vm.authentication.user">
+                <li><a ui-sref="authentication.signup"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Registro</a></li>
+                <li><a ui-sref="authentication.signin"><i class="fa fa-sign-in" aria-hidden="true"></i> Iniciar Sesion</a></li>
+              </div>
+              <li><a href="/chat"><i class="fa fa-commenting" aria-hidden="true"></i> Chat</a></li>
+              <li><a href="/noticias"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Lista de Noticias</a></li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article >
+            <center>
+            <img  class="img-responsive"  ng-src="/modules/core/client/img/pn.png" width="100">
+          </center>
+          </article>
+        </div>
+        <div class="col-md-4 ">
+          <!--
+          <h2>Contacto</h2>
+          <article >
+            <p> </p>
+          </article> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 ">
+          <center>
+            <img  class="img-responsive"  ng-src="/modules/core/client/img/logofer.png"    style=" width: 200px;height:50px;"  />
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 </section>
