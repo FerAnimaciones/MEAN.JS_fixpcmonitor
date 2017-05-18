@@ -2,8 +2,8 @@
   'use strict';
 
   angular
-    .module('core.routes')
-    .config(routeConfig);
+  .module('core.routes')
+  .config(routeConfig);
 
   routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
@@ -27,56 +27,71 @@
     });
 
     $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: '/modules/core/client/views/home.client.view.html',
-        controller: 'HomeController',
-        controller: 'ArticlesListController',
-        controllerAs: 'vm'
-      })
-      .state('sobrenosotros', {
-        url: '/sobrenosotros',
-        templateUrl: '/modules/core/client/views/sobrenosotros.client.view.html',
-        controller: 'sobreNosotros',
-        controllerAs: 'vm'
-      })
-      .state('not-found', {
-        url: '/not-found',
-        templateUrl: '/modules/core/client/views/404.client.view.html',
-        controller: 'ErrorController',
-        controllerAs: 'vm',
-        params: {
-          message: function($stateParams) {
-            return $stateParams.message;
-          }
-        },
-        data: {
-          ignoreState: true,
-          pageTitle: 'Not Found'
+    .state('home', {
+      url: '/',
+      templateUrl: '/modules/core/client/views/home.client.view.html',
+      controller: 'HomeController',
+      controller: 'ArticlesListController',
+      controllerAs: 'vm'
+    })
+    .state('comentarios', {
+      url: '/comentarios',
+      templateUrl: '/modules/core/client/views/comentario.client.view.html',
+      controller: 'Comentario',
+      controllerAs: 'vm'
+    })
+    .state('sobrenosotros', {
+      url: '/sobrenosotros',
+      templateUrl: '/modules/core/client/views/sobrenosotros.client.view.html',
+      controller: 'sobreNosotros',
+      controllerAs: 'vm',
+      data: {
+        pageTitle: 'Comentario'
+      }
+    })
+    .state('not-found', {
+      url: '/not-found',
+      templateUrl: '/modules/core/client/views/404.client.view.html',
+      controller: 'ErrorController',
+      controllerAs: 'vm',
+      params: {
+        message: function($stateParams) {
+          return $stateParams.message;
         }
-      })
-      .state('bad-request', {
-        url: '/bad-request',
-        templateUrl: '/modules/core/client/views/400.client.view.html',
-        controller: 'ErrorController',
-        controllerAs: 'vm',
-        params: {
-          message: function($stateParams) {
-            return $stateParams.message;
-          }
-        },
-        data: {
-          ignoreState: true,
-          pageTitle: 'Bad Request'
+      },
+      data: {
+        ignoreState: true,
+        pageTitle: 'Not Found'
+      }
+    })
+    .state('bad-request', {
+      url: '/bad-request',
+      templateUrl: '/modules/core/client/views/400.client.view.html',
+      controller: 'ErrorController',
+      controllerAs: 'vm',
+      params: {
+        message: function($stateParams) {
+          return $stateParams.message;
         }
-      })
-      .state('forbidden', {
-        url: '/forbidden',
-        templateUrl: '/modules/core/client/views/403.client.view.html',
-        data: {
-          ignoreState: true,
-          pageTitle: 'Forbidden'
-        }
-      });
+      },
+      data: {
+        ignoreState: true,
+        pageTitle: 'Bad Request'
+      }
+    })
+    .state('forbidden', {
+      url: '/forbidden',
+      templateUrl: '/modules/core/client/views/403.client.view.html',
+      data: {
+        ignoreState: true,
+        pageTitle: 'Forbidden'
+      }
+    });
   }
+/*
+  newComentario.$inject = ['ArticlesService'];
+  function newComentario(ArticlesService) {
+    return new ArticlesService();
+  }
+*/
 }());
