@@ -8,6 +8,15 @@ FixPCMonitor use MEAN.JS.
 
 ## Community
 * Pagina oficial de feranimaciones [Official Website](feranimaciones.esy.es/).
+
+# Screenshots
+![Alt text](/capturas/cap1.png)
+![Alt text](/capturas/cap2.png)
+![Alt text](/capturas/cap3.png)
+![Alt text](/capturas/cap4.png)
+![Alt text](/capturas/cap5.png)
+![Alt text](/capturas/cap6.png)
+
 ## License
 [The MIT License](LICENSE.md)
 
